@@ -1,0 +1,37 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal SPA with speed and simplicity in mind.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "node-sass -r --output-style compressed assets/styles/styles.scss -o dist",
+    "watch:sass": "npm run build:sass && npm run build:sass -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/jlblynn/my-portfolio.git"
+  },
+  "keywords": [
+    "Web",
+    "Design",
+    "Web",
+    "Development",
+    "Frontend",
+    "Developer",
+    "Full",
+    "Stack",
+    "Developer",
+    "Petite",
+    "Vue."
+  ],
+  "author": "Jlblynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/jlblynn/my-portfolio/issues"
+  },
+  "homepage": "https://gitlab.com/jlblynn/my-portfolio#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
