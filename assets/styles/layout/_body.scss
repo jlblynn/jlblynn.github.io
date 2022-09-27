@@ -1,0 +1,15 @@
+
+@import '../sass-utils/variables';
+
+.title-text {
+  font-family: $title-font;
+  font-size: 55px;
+  color: whitesmoke
+}
+
+section {
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+}

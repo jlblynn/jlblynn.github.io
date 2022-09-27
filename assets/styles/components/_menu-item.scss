@@ -1,0 +1,22 @@
+
+@import '../sass-utils/variables';
+
+.menu-item {
+  font-family: $paragraph;
+  min-width: 100px;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+}
+
+.menu-icon {
+  min-width: 30px;
+  height: 30px;
+  padding-left: 15px;
+}
