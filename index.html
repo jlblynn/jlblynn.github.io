@@ -22,51 +22,90 @@
 
     </header>
 
-    <div id="start-here">
+    <div class="container">
 
       <div class="title">
         <h1 class="title-text">Web Developer</h1>
       </div>
 
       <section>
-        <div class="menu">
-          <div class="menu-item glass">
-            <img class="menu-icon" src="assets/images/icons/about-icon.png" alt="about icon"/>
-            about
+        <div id="start-here" class="menu">
+          <div class="menu-item glass" @click="store.expand">
+            <div class="menu-head" :class="{selected: store.isactive}">
+              <img class="menu-icon" src="assets/images/icons/about-icon.png" alt="about icon"/>
+              <p class="menu-item-title">about</p>
+            </div>
+            <div class="menu-item-text" v-if="store.displayAbout" >
+              <hr>
+              <p class="about-text">
+                <br>
+                &#128075; Hi there!
+                <br>
+                <br>
+                🍇🏄 I am a web developer that lives in beautiful Margaret River, Western Australia. 
+                <br>
+                <br>
+                💪 I specialise in building fast websites and full-stack web apps. 
+                <br>
+                <br>
+                🔧 Whether it's a CMS like Wordpress or a Node.js stack, I can build it. 
+                <br>
+                <br>
+                💬 If you are interested in collaborating or simply connecting on social media, I hope you will use the links below and I look forward to talking with you. 
+              </p>
+            </div>
           </div>
           <div class="menu-item glass">
-            <img class="menu-icon" src="assets/images/icons/github-icon-ghost.png" alt="github icon"/>
-            github
+            <a class="menu-item-link" href="https://github.com/jlblynn" target="_blank" style="text-decoration: none" >
+              <img class="menu-icon" src="assets/images/icons/github-icon-ghost.png" alt="github icon"/>
+              <p class="menu-item-title">github</p>
+            </a>
           </div>
           <div class="menu-item glass">
-            <img class="menu-icon" src="assets/images/icons/gitlab-icon-ghost.png" alt="gitlab icon"/>
-            gitlab
+            <a href="https://gitlab.com/jlblynn" target="_blank" style="text-decoration: none" >
+              <img class="menu-icon" src="assets/images/icons/gitlab-icon-ghost.png" alt="gitlab icon"/>
+              <p class="menu-item-title">gitlab</p>
+            </a>
           </div>
           <div class="menu-item glass">
-            <img class="menu-icon" src="assets/images/icons/linkedin-icon-ghost.png" alt="linkedin icon"/>
-            linkedIn
+            <a href="https://www.linkedin.com/in/joshua-lynn-29609548/" target="_blank" style="text-decoration: none" >
+              <img class="menu-icon" src="assets/images/icons/linkedin-icon-ghost.png" alt="linkedin icon"/>
+              <p class="menu-item-title">linkedIn</p>
+            </a>
           </div>
           <div class="menu-item glass">
-            <img class="menu-icon" src="assets/images/icons/web-icon.png" alt="web icon"/>
-            website
+            <a href="https://webbrains.io" target="_blank" style="text-decoration: none" >
+              <img class="menu-icon" src="assets/images/icons/web-icon.png" alt="web icon"/>
+              <p class="menu-item-title">website</p>
+            </a>
           </div>
           <div class="menu-item glass">
             <img class="menu-icon" src="assets/images/icons/contact-icon.png" alt="contact icon"/>
-            contact
+            <p class="menu-item-title">contact</p>
           </div>
         </div>
       </section>
 
     </div>
 
-    <footer>
-
-    </footer>
-
     <script type="module">
       import { createApp, reactive } from "https://unpkg.com/petite-vue?module";
 
-      createApp().mount("#hello-world");
+      const store = reactive({
+        displayAbout: false,
+        isactive: false,
+        expand() {
+          let clicked = this.isactive;
+          let isClicked = !clicked;
+          this.isactive = isClicked;
+
+          let display = this.displayAbout;
+          let newDisplay = !display
+          this.displayAbout = newDisplay;
+        }
+      });
+
+      createApp({ store }).mount("#start-here");
     </script>
   </body>
 </html>

@@ -3,12 +3,13 @@
 
 .menu-item {
   font-family: $paragraph;
-  min-width: 100px;
-  color: white;
+  width: 100%;
   font-size: 24px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
+  display: block;
 }
 
 .menu-item:hover {
@@ -18,5 +19,66 @@
 .menu-icon {
   min-width: 30px;
   height: 30px;
-  padding-left: 15px;
+  padding-left: 10px;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.menu-item-title {
+  width: 75%;
+  color: white;
+  display: inline-block;
+
+  text-align: right;
+}
+
+.about-text {
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu-divider {
+  color: white;
+  min-width: 100px;
+  margin: 0 auto;
+  min-height: 2px;
+}
+
+.menu-head {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.menu-head.selected {
+  background: linear-gradient(270deg, #e121f5, #0dfbfd, #3e31f5, #cf35f2);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
+  border-radius: 15px 15px 0 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: -5px;
+  margin-top: -5px;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
