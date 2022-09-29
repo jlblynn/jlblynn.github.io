@@ -23,35 +23,48 @@
     </header>
 
     <div class="container">
-
       <div class="title">
         <h1 class="title-text">Web Developer</h1>
       </div>
 
       <section>
         <div id="start-here" class="menu">
-          <div class="menu-item glass" @click="store.expand">
-            <div class="menu-head" :class="{selected: store.isactive}">
+          <div class="menu-item glass" @click="store.expand(`about`)">
+            <div class="menu-head" :class="{selected: store.aboutisactive}">
               <img class="menu-icon" src="assets/images/icons/about-icon.png" alt="about icon"/>
               <p class="menu-item-title">about</p>
             </div>
             <div class="menu-item-text" v-if="store.displayAbout" >
               <hr>
               <p class="about-text">
-                <br>
-                &#128075; Hi there!
-                <br>
-                <br>
+                &#128075; Hi there! &#128075;
+              </p>
+              <p class="about-text">
                 🍇🏄 I am a web developer that lives in beautiful Margaret River, Western Australia. 
-                <br>
-                <br>
+              </p>
+              <p class="about-text">
                 💪 I specialise in building fast websites and full-stack web apps. 
-                <br>
-                <br>
+              </p>
+              <p class="about-text">
                 🔧 Whether it's a CMS like Wordpress or a Node.js stack, I can build it. 
-                <br>
-                <br>
+              </p>
+              <p class="about-text">
                 💬 If you are interested in collaborating or simply connecting on social media, I hope you will use the links below and I look forward to talking with you. 
+              </p>
+            </div>
+          </div>
+          <div class="menu-item glass" @click="store.expand(`contact`)">
+            <div class="menu-head" :class="{selected: store.contactisactive}">
+              <img class="menu-icon" src="assets/images/icons/contact-icon.png" alt="contact icon"/>
+              <p class="menu-item-title">contact</p>
+            </div>
+            <div class="menu-item-text" v-if="store.displayContact" >
+              <hr>
+              <p class="about-text">
+                <a class="contact-link" href="mailto:jlblynn90@gmail.com" style="text-decoration: none">📧 jlblynn90@gmail.com</a>
+                <br>
+                <br>
+                <a class="contact-link" href="tel:+61432580620" style="text-decoration: none">📱 0432 580 620</a>
               </p>
             </div>
           </div>
@@ -59,31 +72,32 @@
             <a class="menu-item-link" href="https://github.com/jlblynn" target="_blank" style="text-decoration: none" >
               <img class="menu-icon" src="assets/images/icons/github-icon-ghost.png" alt="github icon"/>
               <p class="menu-item-title">github</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
           <div class="menu-item glass">
-            <a href="https://gitlab.com/jlblynn" target="_blank" style="text-decoration: none" >
+            <a class="menu-item-link" href="https://gitlab.com/jlblynn" target="_blank" style="text-decoration: none" >
               <img class="menu-icon" src="assets/images/icons/gitlab-icon-ghost.png" alt="gitlab icon"/>
               <p class="menu-item-title">gitlab</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
           <div class="menu-item glass">
-            <a href="https://www.linkedin.com/in/joshua-lynn-29609548/" target="_blank" style="text-decoration: none" >
+            <a class="menu-item-link" href="https://www.linkedin.com/in/joshua-lynn-29609548/" target="_blank" style="text-decoration: none" >
               <img class="menu-icon" src="assets/images/icons/linkedin-icon-ghost.png" alt="linkedin icon"/>
               <p class="menu-item-title">linkedIn</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
           <div class="menu-item glass">
-            <a href="https://webbrains.io" target="_blank" style="text-decoration: none" >
+            <a class="menu-item-link" href="https://webbrains.io" target="_blank" style="text-decoration: none" >
               <img class="menu-icon" src="assets/images/icons/web-icon.png" alt="web icon"/>
-              <p class="menu-item-title">website</p>
+              <p class="menu-item-title">web brains</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
-          </div>
-          <div class="menu-item glass">
-            <img class="menu-icon" src="assets/images/icons/contact-icon.png" alt="contact icon"/>
-            <p class="menu-item-title">contact</p>
           </div>
         </div>
+        
       </section>
 
     </div>
@@ -93,15 +107,29 @@
 
       const store = reactive({
         displayAbout: false,
-        isactive: false,
-        expand() {
-          let clicked = this.isactive;
-          let isClicked = !clicked;
-          this.isactive = isClicked;
+        displayContact: false,
+        aboutisactive: false,
+        contactisactive: false,
+        expand(item) {
+          if (item == "about") {
+            let clicked = this.aboutisactive;
+            let isClicked = !clicked;
+            this.aboutisactive = isClicked;
 
-          let display = this.displayAbout;
-          let newDisplay = !display
-          this.displayAbout = newDisplay;
+            let display = this.displayAbout;
+            let newDisplay = !display
+            this.displayAbout = newDisplay;
+          } else if (item == "contact") {
+            let clicked = this.contactisactive;
+            let isClicked = !clicked;
+            this.contactisactive = isClicked;
+
+            let display = this.displayContact;
+            let newDisplay = !display
+            this.displayContact = newDisplay;
+          } else {
+            console.log("error")
+          }
         }
       });
 

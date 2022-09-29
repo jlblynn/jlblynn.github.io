@@ -2,20 +2,26 @@
 @import '../components/glass';
 
 .container {
-
   background-image: url("../assets/images/background-iphone11.png");
   background-attachment: fixed;
-
   
   width: 100vw;
   height: 100vh;
   display: block;
   padding: 10px;
   overflow: scroll;
+  z-index: 1;
 }
 
 .title {
   margin: 0 auto;
   width: 300px;
   padding-top: 50px;
+}
+
+.spline {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  margin: -10px;
 }
