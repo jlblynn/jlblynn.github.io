@@ -1,16 +1,35 @@
 
+@import '../sass-utils/mixins';
 @import '../components/glass';
 
 .container {
-  background-image: url("../assets/images/background-iphone11.png");
-  background-attachment: fixed;
+
+  @include xs {
+    background-image: url("../assets/images/background-639px.png");
+  }
+  @include sm {
+    background-image: url("../assets/images/background-667px.png");
+  }
+  @include md {
+    background-image: url("../assets/images/background-1023px.png");
+  }
+  @include lg {
+    background-image: url("../assets/images/background-1279px.png");
+  }
+  @include xl {
+    background-image: url("../assets/images/background-1535px.png");
+  }
+  @include xxl {
+    background-image: url("../assets/images/background-xxl.png");
+  }
   
-  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   height: 100vh;
   display: block;
-  padding: 10px;
   overflow: scroll;
-  z-index: 1;
 }
 
 .title {
@@ -19,9 +38,3 @@
   padding-top: 50px;
 }
 
-.spline {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  margin: -10px;
-}

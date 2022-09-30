@@ -28,7 +28,7 @@
       </div>
 
       <section>
-        <div id="start-here" class="menu">
+        <div id="main-menu" class="menu">
           <div class="menu-item glass" @click="store.expand(`about`)">
             <div class="menu-head" :class="{selected: store.aboutisactive}">
               <img class="menu-icon" src="assets/images/icons/about-icon.png" alt="about icon"/>
@@ -133,7 +133,7 @@
         }
       });
 
-      createApp({ store }).mount("#start-here");
+      createApp({ store }).mount("#main-menu");
     </script>
   </body>
 </html>
