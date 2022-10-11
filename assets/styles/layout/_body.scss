@@ -1,5 +1,6 @@
 
 @import '../sass-utils/variables';
+@import '../sass-utils/mixins';
 
 .title-text {
   font-family: $title-font;
@@ -9,10 +10,24 @@
 
 section {
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 50px;
   z-index: 2;
+  
+  @include xs {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+  }
+  @include sm {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+  }
+  @include md {
+    width: 500px;
+  }
+  
+  
+  
 }
 
 hr {
