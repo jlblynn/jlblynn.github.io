@@ -33,7 +33,7 @@
         <div id="main-menu" class="menu">
           <div class="menu-item glass" :class="{selected: store.aboutisactive}" @click="store.expand(`about`)">
             <div class="menu-head" :class="{selected: store.aboutisactive}">
-              <img class="menu-icon" src="assets/images/icons/about-icon.png" alt="about icon"/>
+              <span id="about-icon" class="menu-icon" alt="about icon"></span>
               <p class="menu-item-title">about</p>
             </div>
             <div class="menu-item-text" v-if="store.displayAbout" >
@@ -57,7 +57,7 @@
           </div>
           <div class="menu-item glass" :class="{selected: store.contactisactive}" @click="store.expand(`contact`)">
             <div class="menu-head" :class="{selected: store.contactisactive}">
-              <img class="menu-icon" src="assets/images/icons/contact-icon.png" alt="contact icon"/>
+              <span id="contact-icon" class="menu-icon" alt="contact icon"></span>
               <p class="menu-item-title">contact</p>
             </div>
             <div class="menu-item-text" v-if="store.displayContact" >
@@ -72,28 +72,28 @@
           </div>
           <div class="menu-item glass">
             <a class="menu-item-link" href="https://github.com/jlblynn" target="_blank" style="text-decoration: none" >
-              <img class="menu-icon" src="assets/images/icons/github-icon-ghost.png" alt="github icon"/>
+              <span id="github-icon" class="menu-icon" alt="github icon"></span>
               <p class="menu-item-title">github</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
           <div class="menu-item glass">
             <a class="menu-item-link" href="https://gitlab.com/jlblynn" target="_blank" style="text-decoration: none" >
-              <img class="menu-icon" src="assets/images/icons/gitlab-icon-ghost.png" alt="gitlab icon"/>
+              <span id="gitlab-icon" class="menu-icon" alt="gitlab icon"></span>
               <p class="menu-item-title">gitlab</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
           <div class="menu-item glass">
             <a class="menu-item-link" href="https://www.linkedin.com/in/joshua-lynn-29609548/" target="_blank" style="text-decoration: none" >
-              <img class="menu-icon" src="assets/images/icons/linkedin-icon-ghost.png" alt="linkedin icon"/>
+              <span id="linkedin-icon" class="menu-icon" alt="linkedin icon"></span>
               <p class="menu-item-title">linkedIn</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
           <div class="menu-item glass">
             <a class="menu-item-link" href="https://webbrains.io" target="_blank" style="text-decoration: none" >
-              <img class="menu-icon" src="assets/images/icons/web-icon.png" alt="web icon"/>
+              <span id="web-icon" class="menu-icon" alt="web icon"></span>
               <p class="menu-item-title">web brains</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>

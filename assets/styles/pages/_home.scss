@@ -13,8 +13,10 @@
   overflow: scroll;
 
   @include xs {
+    /* 
     background-image: url("../assets/images/background-639px.png");
-
+    */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
     .title {
       margin: 0 auto;
       width: 300px;
@@ -22,8 +24,10 @@
     }
   }
   @include sm {
+    /* 
     background-image: url("../assets/images/background-667px.png");
-
+    */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
     .title {
       margin: 0 auto;
       width: 500px;
@@ -31,8 +35,10 @@
     }
   }
   @include md {
+    /* 
     background-image: url("../assets/images/background-1023px.png");
-
+    */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
     .title {
       margin: 0 auto;
       width: 500px;
@@ -41,13 +47,22 @@
     }
   }
   @include lg {
-    background-image: url("../assets/images/background-1279px.png");
+    /* 
+      background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
+    */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
   }
   @include xl {
+    /* 
     background-image: url("../assets/images/background-1535px.png");
+    */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
   }
   @include xxl {
+    /* 
     background-image: url("../assets/images/background-xxl.png");
+    */
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
   }
   
 }

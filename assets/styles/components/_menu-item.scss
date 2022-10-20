@@ -60,6 +60,199 @@
     position: relative;
     display: block;
     margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+#about-icon {
+
+  background-repeat: no-repeat;
+
+  @include xs {
+    background-image: url("../assets/images/icons/about-icon.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include sm {
+    background-image: url("../assets/images/icons/about-icon.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include md {
+    background-image: url("../assets/images/icons/about-50px.png");
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+#contact-icon {
+
+  background-repeat: no-repeat;
+
+  @include xs {
+    background-image: url("../assets/images/icons/contact-icon.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include sm {
+    background-image: url("../assets/images/icons/contact-icon.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include md {
+    background-image: url("../assets/images/icons/contact-50px.png");
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+#github-icon {
+
+  background-repeat: no-repeat;
+
+  @include xs {
+    background-image: url("../assets/images/icons/github-icon-ghost.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include sm {
+    background-image: url("../assets/images/icons/github-icon-ghost.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include md {
+    background-image: url("../assets/images/icons/github-50px.png");
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+#gitlab-icon {
+
+  background-repeat: no-repeat;
+
+  @include xs {
+    background-image: url("../assets/images/icons/gitlab-icon-ghost.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include sm {
+    background-image: url("../assets/images/icons/gitlab-icon-ghost.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include md {
+    background-image: url("../assets/images/icons/gitlab-50px.png");
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+#linkedin-icon {
+
+  background-repeat: no-repeat;
+
+  @include xs {
+    background-image: url("../assets/images/icons/linkedin-icon-ghost.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include sm {
+    background-image: url("../assets/images/icons/linkedin-icon-ghost.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include md {
+    background-image: url("../assets/images/icons/linkedin-50px.png");
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+#web-icon {
+
+  background-repeat: no-repeat;
+
+  @include xs {
+    background-image: url("../assets/images/icons/web-icon.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include sm {
+    background-image: url("../assets/images/icons/web-icon.png");
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding-left: 0;
+    margin: 0;
+  }
+  @include md {
+    background-image: url("../assets/images/icons/web-50px.png");
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 0px;
   }
 }
 
@@ -113,6 +306,10 @@
   margin-right: 10px;
   border-radius: 20px;
   background-color: #4c4c4c;
+
+  @include md {
+    text-align: center;
+  }
 }
 
 .menu-divider {
