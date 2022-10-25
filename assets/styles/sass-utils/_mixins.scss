@@ -1,5 +1,10 @@
 @import 'breakpoints';
 
+@mixin xs {
+  @media (min-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
 @mixin sm {
   @media (min-width: map-get($breakpoints, "sm")) {
     @content;

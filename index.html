@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>&#128075; Joshua Lynn</title>
+    <title> 🌐 💻 Web Developer | Joshua Lynn</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,6 +9,12 @@
     <meta name="description" content="Hi there! My name is Josh and I'm a Web Developer.">
 
     <link rel="stylesheet" href="dist/styles.css">
+
+    <!-- Favicons -->
+		<link rel="icon" href="assets/images/icons/favicon.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/apple-touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="assets/images/icons/apple-touch-icon-167.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon-180.png">
 
   </head>
   
@@ -18,21 +24,162 @@
 
     </header>
 
-    <div id="start-here">
-      <h1>Hello World</h1>
+    <div class="container">
+      <div class="title" data-tilt data-tilt-scale="1.1">
+        <h1 class="title-text">Joshua Lynn</h1>
+        <h2 class="subtitle-text">web developer</h2>
+      </div>
 
-      <a class="btn" href="#">Button</a>
+      <section>
+        <div id="main-menu" class="menu" data-tilt data-tilt-scale="1.05">
+          <div class="menu-item glass" :class="{selected: store.aboutisactive}" @click="store.expand(`about`)" data-tilt>
+            <div class="menu-head" :class="{selected: store.aboutisactive}">
+              <div id="about-icon" class="menu-icon" alt="about icon"></div>
+              <p class="menu-item-title">about</p>
+            </div>
+            <div class="menu-item-text" v-if="store.displayAbout">
+              <hr>
+              <p class="about-text">
+                &#128075; Hi there! &#128075;
+              </p>
+              <p class="about-text">
+                🍇🏄 I am a web developer that lives in beautiful Margaret River, Western Australia. 
+              </p>
+              <p class="about-text">
+                💪 I specialise in building fast websites and full-stack web apps. 
+              </p>
+              <p class="about-text">
+                🔧 Whether it's a CMS like Wordpress or a Node.js stack, I can build it. 
+              </p>
+              <p class="about-text">
+                💬 If you are interested in collaborating or simply connecting on social media, I hope you will use the links below and I look forward to talking with you. 
+              </p>
+            </div>
+          </div>
+          <div class="menu-item glass" :class="{selected: store.contactisactive}" @click="store.expand(`contact`)" data-tilt>
+            <div class="menu-head" :class="{selected: store.contactisactive}">
+              <div id="contact-icon" class="menu-icon" alt="contact icon"></div>
+              <p class="menu-item-title">contact</p>
+            </div>
+            <div class="menu-item-text" v-if="store.displayContact" >
+              <hr>
+              <p class="about-text">
+                <a class="contact-link" href="mailto:jlblynn90@gmail.com" style="text-decoration: none">📧 jlblynn90@gmail.com</a>
+                <br>
+                <br>
+                <a class="contact-link" href="tel:+61432580620" style="text-decoration: none">📱 0432 580 620</a>
+              </p>
+            </div>
+          </div>
+          <div class="menu-item glass" data-tilt>
+            <a class="menu-item-link" href="https://github.com/jlblynn" target="_blank" style="text-decoration: none" >
+              <div id="github-icon" class="menu-icon" alt="github icon"></div>
+              <p class="menu-item-title">github</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
+            </a>
+          </div>
+          <div class="menu-item glass" data-tilt>
+            <a class="menu-item-link" href="https://gitlab.com/jlblynn" target="_blank" style="text-decoration: none" >
+              <div id="gitlab-icon" class="menu-icon" alt="gitlab icon"></div>
+              <p class="menu-item-title">gitlab</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
+            </a>
+          </div>
+          <div class="menu-item glass" data-tilt>
+            <a class="menu-item-link" href="https://www.linkedin.com/in/joshua-lynn-29609548/" target="_blank" style="text-decoration: none" >
+              <div id="linkedin-icon" class="menu-icon" alt="linkedin icon"></div>
+              <p class="menu-item-title">linkedIn</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
+            </a>
+          </div>
+          <div class="menu-item glass" data-tilt>
+            <a class="menu-item-link" href="https://webbrains.io" target="_blank" style="text-decoration: none" >
+              <div id="web-icon" class="menu-icon" alt="web icon"></div>
+              <p class="menu-item-title">web brains</p>
+              <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
+            </a>
+          </div>
+        </div>
+        
+      </section>
 
     </div>
-
-    <footer>
-
-    </footer>
 
     <script type="module">
       import { createApp, reactive } from "https://unpkg.com/petite-vue?module";
 
-      createApp().mount("#hello-world");
+      const store = reactive({
+        displayAbout: false,
+        displayContact: false,
+        aboutisactive: false,
+        contactisactive: false,
+        expand(item) {
+          if (item == "about") {
+            let clicked = this.aboutisactive;
+            let isClicked = !clicked;
+            this.aboutisactive = isClicked;
+
+            let display = this.displayAbout;
+            let newDisplay = !display
+            this.displayAbout = newDisplay;
+          } else if (item == "contact") {
+            let clicked = this.contactisactive;
+            let isClicked = !clicked;
+            this.contactisactive = isClicked;
+
+            let display = this.displayContact;
+            let newDisplay = !display
+            this.displayContact = newDisplay;
+          } else {
+            console.log("error")
+          }
+        }
+      });
+
+      createApp({ store }).mount("#main-menu");
+    </script>
+
+    <!-- Vanilla Tilt -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.2.2/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joshua Lynn",
+        "email": "mailto:jlblynn90@gmail.com",
+        "hasOccupation": "Web Developer",
+        "jobTitle": "Web Developer",
+        "nationality": "Australian",
+        "telephone": "(+61) 432 480 620",
+        "url": "https://webbrains.io",
+        "image": "",
+        "@id": "",
+        "worksFor": "Web Brains",
+        "telephone": "0432580620",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "9b Nebbiolo Place",
+          "addressLocality": "Margaret River",
+          "addressRegion": "WA",
+          "postalCode": "6285",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -33.9438661,
+          "longitude": 115.0621755
+        },
+        "sameAs": [
+          "https://www.facebook.com/webbrains.io",
+          "https://www.instagram.com/webbrains.io/",
+          "https://www.linkedin.com/company/web-brains-io/",
+          "http://webbrains.io/"
+        ] 
+      }
     </script>
   </body>
 </html>
