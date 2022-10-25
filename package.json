@@ -33,6 +33,7 @@
   "homepage": "https://gitlab.com/jlblynn/my-portfolio#readme",
   "dependencies": {
     "node-sass": "^7.0.3",
-    "scss-reset": "^1.2.2"
+    "scss-reset": "^1.2.2",
+    "vanilla-tilt": "^1.7.2"
   }
 }

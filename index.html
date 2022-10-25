@@ -25,18 +25,19 @@
     </header>
 
     <div class="container">
-      <div class="title">
-        <h1 class="title-text">Web Developer</h1>
+      <div class="title" data-tilt data-tilt-scale="1.1">
+        <h1 class="title-text">Joshua Lynn</h1>
+        <h2 class="subtitle-text">web developer</h2>
       </div>
 
       <section>
-        <div id="main-menu" class="menu">
-          <div class="menu-item glass" :class="{selected: store.aboutisactive}" @click="store.expand(`about`)">
+        <div id="main-menu" class="menu" data-tilt data-tilt-scale="1.05">
+          <div class="menu-item glass" :class="{selected: store.aboutisactive}" @click="store.expand(`about`)" data-tilt>
             <div class="menu-head" :class="{selected: store.aboutisactive}">
-              <span id="about-icon" class="menu-icon" alt="about icon"></span>
+              <div id="about-icon" class="menu-icon" alt="about icon"></div>
               <p class="menu-item-title">about</p>
             </div>
-            <div class="menu-item-text" v-if="store.displayAbout" >
+            <div class="menu-item-text" v-if="store.displayAbout">
               <hr>
               <p class="about-text">
                 &#128075; Hi there! &#128075;
@@ -55,9 +56,9 @@
               </p>
             </div>
           </div>
-          <div class="menu-item glass" :class="{selected: store.contactisactive}" @click="store.expand(`contact`)">
+          <div class="menu-item glass" :class="{selected: store.contactisactive}" @click="store.expand(`contact`)" data-tilt>
             <div class="menu-head" :class="{selected: store.contactisactive}">
-              <span id="contact-icon" class="menu-icon" alt="contact icon"></span>
+              <div id="contact-icon" class="menu-icon" alt="contact icon"></div>
               <p class="menu-item-title">contact</p>
             </div>
             <div class="menu-item-text" v-if="store.displayContact" >
@@ -70,30 +71,30 @@
               </p>
             </div>
           </div>
-          <div class="menu-item glass">
+          <div class="menu-item glass" data-tilt>
             <a class="menu-item-link" href="https://github.com/jlblynn" target="_blank" style="text-decoration: none" >
-              <span id="github-icon" class="menu-icon" alt="github icon"></span>
+              <div id="github-icon" class="menu-icon" alt="github icon"></div>
               <p class="menu-item-title">github</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
-          <div class="menu-item glass">
+          <div class="menu-item glass" data-tilt>
             <a class="menu-item-link" href="https://gitlab.com/jlblynn" target="_blank" style="text-decoration: none" >
-              <span id="gitlab-icon" class="menu-icon" alt="gitlab icon"></span>
+              <div id="gitlab-icon" class="menu-icon" alt="gitlab icon"></div>
               <p class="menu-item-title">gitlab</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
-          <div class="menu-item glass">
+          <div class="menu-item glass" data-tilt>
             <a class="menu-item-link" href="https://www.linkedin.com/in/joshua-lynn-29609548/" target="_blank" style="text-decoration: none" >
-              <span id="linkedin-icon" class="menu-icon" alt="linkedin icon"></span>
+              <div id="linkedin-icon" class="menu-icon" alt="linkedin icon"></div>
               <p class="menu-item-title">linkedIn</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
           </div>
-          <div class="menu-item glass">
+          <div class="menu-item glass" data-tilt>
             <a class="menu-item-link" href="https://webbrains.io" target="_blank" style="text-decoration: none" >
-              <span id="web-icon" class="menu-icon" alt="web icon"></span>
+              <div id="web-icon" class="menu-icon" alt="web icon"></div>
               <p class="menu-item-title">web brains</p>
               <img class="open-tab" src="assets/images/icons/open-tab.png" alt="open in a new tab" />
             </a>
@@ -136,6 +137,12 @@
       });
 
       createApp({ store }).mount("#main-menu");
+    </script>
+
+    <!-- Vanilla Tilt -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.2.2/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init();
     </script>
 
     <script type="application/ld+json">
