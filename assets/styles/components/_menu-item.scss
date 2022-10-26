@@ -52,7 +52,6 @@
   left: 10px;
   margin-bottom: 3px;
   position: relative;
-  animation: animate 4s linear infinite;
 
   @include xs {
     min-width: 30px;
@@ -83,27 +82,6 @@
     margin-top: 10px;
     padding-left: 0px;
     left: 0px;
-  }
-}
-
-@keyframes animate {
-  0% {
-      transform: //translate(-50%, -50%) 
-        //perspective(200px) 
-        rotateX(0deg) 
-        rotateY(0deg);
-  }
-  50% {
-      transform: //translate(-50%, -50%)
-        //perspective(200px) 
-        rotateX(0deg) 
-        rotateY(180deg);
-  }
-  100% {
-      transform: //translate(-50%, -50%)
-        //perspective(200px) 
-        rotateX(0deg)
-        rotateY(360deg);
   }
 }
 
