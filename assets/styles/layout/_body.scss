@@ -9,7 +9,7 @@ body {
   background-attachment: fixed;
   height: 100vh;
   display: block;
-  overflow: scroll;
+  //overflow: scroll;
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F014%2F665%2F033%2Foriginal%2Fyargon-kerman-webp-net-gifmaker-39.gif%3F1544919451&f=1&nofb=1&ipt=33560dc36b75adb3ab79e9dec21d28a2bf538c5e092c4d5e48f965a64f25e3d2&ipo=images");
 
 }
@@ -52,7 +52,6 @@ body {
 
 section {
   margin: 0 auto;
-  z-index: 2;
   
   @include xs {
     padding-left: 20px;
@@ -62,10 +61,12 @@ section {
   @include sm {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 50px;
+    //padding-top: 100px;
   }
   @include md {
     width: 500px;
+    height: 100%;
+    //padding-top: 100;
   }
   
   

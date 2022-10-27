@@ -3,7 +3,7 @@
 @import '../components/glass';
 
 .container {
-  height: 100vh;
+  //height: 100vh;
   display: block;
   
   @include xs {
@@ -38,6 +38,7 @@
     .title {
       margin: 0 auto;
       width: 500px;
+      height: 350px;
       padding-top: 100px;
       text-align: center;
     }
